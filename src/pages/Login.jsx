@@ -1,6 +1,6 @@
 import React, {useState} from 'react'; 
 import '../styles/Auth.css' 
-import history from '../history'
+// import history from '../history'
 
 function Login(){
     const [username, setUsername] = useState('')
@@ -21,7 +21,7 @@ function Login(){
             localStorage.setItem('IsAuthenticated', 'true')  //creates an object to store data
             
             //Redirect to homepage
-            history.push('/')
+            // history.push('/')
 
             alert('Login Successful')
         } else{

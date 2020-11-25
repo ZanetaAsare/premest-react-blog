@@ -1,0 +1,52 @@
+.homepage{
+    margin: 5%;
+    text-align: center;
+  }
+
+.blogs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogpost{
+    padding: 2% 5%;
+    background-color: blanchedalmond;
+    margin: 2%;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.blogpost:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#blogtitle{
+    padding-bottom: 10px;
+}
+
+.addInfo{
+    display: flex;
+}
+
+.blogInfo{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogVotes{
+    padding-left: 12%;
+}
+
+/* .blogVotes span{
+    top: 40px;
+} */
+
+#upvote{
+    transform: rotate(180deg);
+}
+

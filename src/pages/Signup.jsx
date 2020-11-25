@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import history from '../history';
+// import history from '../history';
 
 
 function Signup(){
@@ -31,7 +31,7 @@ function Signup(){
         alert('Sign Up Successful')
 
         //Redirect to login
-        history.push('/login')
+        // history.push('/login')
     }
     
     return(
