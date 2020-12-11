@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const postSchema = mongoose.Schema({
-    title: {type: String, required: true},
+    title: {type: String, required: true, unique: true},
     author: {type: String, required: true},
     content: {type: String, required: true},
     date_created: {type: String, default: Date.now},
@@ -19,6 +19,6 @@ postSchema.set('toJSON', {      //converts query to JSON
     }
 })
 
-const Post = mongoose.model(Post, postSchema)
+const Post = mongoose.model('Post', postSchema)
 
 module.exports = Post

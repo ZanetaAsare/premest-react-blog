@@ -19,16 +19,30 @@ const signup = async (req,res) => {
 
 //  GET to authenticate user
 const login = async (req, res) => {
-    try{
-        let person = await User.find({email: req.body.email, password: req.body.password})
-        if (!person){
-            res.status(400).send({message: 'invalid login'})
-        } else{
-            res.status(200).send({message: 'login successful'})
-        }
 
-    } catch (error){
-        console.log(error)
+    const { email, password } = req.body;
+
+    try {
+      let user = await User.findOne({email});
+
+      if (!user){
+        return res.status(400).send({
+          message: "User Does Not Exist"
+        });
+        }
+        const isMatch = await (password === user.password)
+  
+      if (!isMatch){
+        return res.status(400).send({
+          message: "Incorrect Password !"
+        });
+        } 
+        res.status(200).send({message: 'Login Successful'})
+    } catch (e) {
+        console.error(e);
+        res.status(500).send({
+        message: "Server Error"
+        });
     }
 }
 
