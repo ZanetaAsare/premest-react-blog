@@ -22,7 +22,19 @@
     outline: none;
     padding: 9px 12px;
     border-radius: 5px;
+    text-align: center;
 }
+
+.auth textarea {
+    width: 100%;
+    margin-bottom: 2rem;
+    border: 1px solid #c3c3c3;
+    outline: none;
+    padding: 9px 12px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .auth button {
     border: none;
     outline: none;

@@ -16,7 +16,8 @@ function App() {
               <Link to='/'><li>Home</li></Link>
               <Link to='/login'><li>Login</li></Link>
               <Link to='/signup'><li>Signup</li></Link>
-            </ul>
+              <Link to='/add-post'><li>Add Post</li></Link>
+            </ul>s
         </nav>
         <Switch>
             <Route path={'/'} exact={true} component={Home} />

@@ -1,0 +1,27 @@
+const { request, response } = require('express');
+const express = require('express');
+const mongoose = require('mongoose')
+require('dotenv').config()
+
+const app = express();
+const userRoutes = require('./routes/auth')
+
+mongoose.connect(process.env.MONGODB_URL_DEV, {})
+.then(()=>{
+    console.log('mongodb connected')
+})
+.catch((error)=>{
+    console.log(error)
+})
+
+app.use(express.json())
+app.use(userRoutes)
+
+app.listen(process.env.PORT, () => {
+    console.log('Server started on localhost: 4000')
+});
+
+// app.get('/', (request, response) => {
+//     response.send('<h1>Here Now Now Now bbbb</h1>')
+// });
+

@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-// import history from '../history';
+import {useHistory} from 'react-router-dom'
 
 
 function Signup(){
+    let history = useHistory();
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [username, setUsername] = useState('')
@@ -31,7 +32,7 @@ function Signup(){
         alert('Sign Up Successful')
 
         //Redirect to login
-        // history.push('/login')
+        history.push('/login')
     }
     
     return(
